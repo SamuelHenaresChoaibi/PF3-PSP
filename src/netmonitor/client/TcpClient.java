@@ -24,9 +24,9 @@ public class TcpClient {
             salida.println("PUERTO_UDP " + puertoLocal);
 
             // Iniciar listener UDP
-            UdpNotificationListener escuchador = new UdpNotificationListener(socketUdp);
-            Thread hiloEscuchador = new Thread(escuchador);
-            hiloEscuchador.start();
+            UdpNotificationListener listener = new UdpNotificationListener(socketUdp);
+            Thread hiloListener = new Thread(listener);
+            hiloListener.start();
 
             // Menú
             Scanner entradaUsuario = new Scanner(System.in);
@@ -76,8 +76,8 @@ public class TcpClient {
                 }
             }
 
-            escuchador.stopEscucha();
-            hiloEscuchador.join();
+            listener.stopEscucha();
+            hiloListener.join();
             socket.close();
         } catch (IOException | InterruptedException e) {
             System.out.println("Error: " + e.getMessage());
