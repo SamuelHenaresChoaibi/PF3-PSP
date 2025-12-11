@@ -40,7 +40,7 @@ public class TcpClient {
                 System.out.println("5. APAGAR");
                 System.out.print("Elige opción: ");
                 int opcion = entradaUsuario.nextInt();
-                entradaUsuario.nextLine(); // Consumir salto de línea
+                entradaUsuario.nextLine();
 
                 String respuesta;
                 switch (opcion) {
