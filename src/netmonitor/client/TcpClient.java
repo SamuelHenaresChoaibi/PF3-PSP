@@ -34,7 +34,7 @@ public class TcpClient {
             while (ejecutando) {
                 System.out.println("Menú:");
                 System.out.println("1. HORA");
-                System.out.println("2. ECO");
+                System.out.println("2. ECHO");
                 System.out.println("3. CONTAR");
                 System.out.println("4. ADIÓS");
                 System.out.println("5. APAGAR");
@@ -52,7 +52,7 @@ public class TcpClient {
                     case 2:
                         System.out.print("Introduce texto para eco: ");
                         String texto = entradaUsuario.nextLine();
-                        salida.println("ECO " + texto);
+                        salida.println("ECHO " + texto);
                         respuesta = entrada.readLine();
                         System.out.println("Respuesta del servidor: " + respuesta);
                         break;
