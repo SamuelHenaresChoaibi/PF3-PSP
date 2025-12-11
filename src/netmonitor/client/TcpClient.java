@@ -50,7 +50,7 @@ public class TcpClient {
                         System.out.println("Hora del servidor: " + respuesta);
                         break;
                     case 2:
-                        System.out.print("Introduce texto para eco: ");
+                        System.out.print("Introduce texto para echo: ");
                         String texto = entradaUsuario.nextLine();
                         salida.println("ECHO " + texto);
                         respuesta = entrada.readLine();

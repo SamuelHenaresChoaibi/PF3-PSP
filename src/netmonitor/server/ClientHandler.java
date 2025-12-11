@@ -26,7 +26,7 @@ public class ClientHandler implements Runnable {
             salida = new PrintWriter(socket.getOutputStream(), true);
 
             String lineaPuertoUdp = entrada.readLine();
-            if (lineaPuertoUdp != null && lineaPuertoUdp.startsWith("PUERTO_UDP ")) {
+            if (lineaPuertoUdp != null && lineaPuertoUdp.startsWith("PUERTO_UDP")) {
                 int puertoUdp = Integer.parseInt(lineaPuertoUdp.substring(11));
                 InetAddress direccion = socket.getInetAddress();
                 infoCliente = new ClientInfo(direccion, puertoUdp);
