@@ -43,7 +43,7 @@ public class ClientHandler implements Runnable {
             while ((comando = entrada.readLine()) != null) {
                 if (comando.equals("HORA")) {
                     salida.println(new Date());
-                } else if (comando.startsWith("ECO ")) {
+                } else if (comando.startsWith("ECHO")) {
                     String texto = comando.substring(4);
                     tcpServer.getEmisor().broadcast(texto, tcpServer.getClientes(), infoCliente);
                     salida.println("OK");
